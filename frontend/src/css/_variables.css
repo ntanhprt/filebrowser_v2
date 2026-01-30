@@ -1,0 +1,67 @@
+:root {
+  /* Core Colors */
+  --blue: #2196f3;
+  --blue-hover: #1976d2;
+  --dark-blue: #1565c0;
+  --red: #f44336;
+  --dark-red: #d32f2f;
+  --green: #4caf50;
+
+  /* Palette */
+  --background: #fafafa;
+  --surfacePrimary: #ffffff;
+  --surfaceSecondary: #f5f5f5;
+  --surfaceTertiary: #eeeeee;
+
+  /* Text */
+  --textPrimary: #212121;
+  --textSecondary: #757575;
+  --textTertiary: #9e9e9e;
+
+  /* Borders & Dividers */
+  --divider: rgba(0, 0, 0, 0.08);
+  --borderPrimary: rgba(0, 0, 0, 0.12);
+  --borderSecondary: rgba(0, 0, 0, 0.2);
+
+  /* Interactive */
+  --hover: rgba(0, 0, 0, 0.04);
+  --selection: rgba(33, 150, 243, 0.12);
+  --action: #757575;
+
+  /* Icon Colors - Standard File Colors */
+  --iconPrimary: var(--blue);
+  --iconSecondary: #ffffff;
+  --iconTertiary: #bdbdbd;
+
+  /* File type icon colors */
+  --icon-blue: #2196f3;
+  --icon-red: #f44336;
+  --icon-green: #4caf50;
+  --icon-yellow: #ffc107;
+  --icon-orange: #ff9800;
+  --icon-violet: #9c27b0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+:root.dark {
+  --background: #121212;
+  --surfacePrimary: #1e1e1e;
+  --surfaceSecondary: #2d2d2d;
+  --surfaceTertiary: #3d3d3d;
+
+  --textPrimary: #ffffff;
+  --textSecondary: #b0b0b0;
+  --textTertiary: #808080;
+
+  --divider: rgba(255, 255, 255, 0.08);
+  --borderPrimary: rgba(255, 255, 255, 0.12);
+  --borderSecondary: rgba(255, 255, 255, 0.2);
+
+  --hover: rgba(255, 255, 255, 0.04);
+  --selection: rgba(33, 150, 243, 0.2);
+  --action: #b0b0b0;
+}

@@ -1,0 +1,119 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--textSecondary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*:hover,
+*:active,
+*:focus {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+audio,
+video {
+  width: 100%;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+.container {
+  width: 95%;
+  max-width: 960px;
+  margin: 1em auto 0;
+}
+
+i.spin {
+  animation: spin 1s linear infinite;
+}
+
+#app {
+  transition: 0.2s ease padding;
+}
+
+#app.multiple {
+  padding-bottom: 4em;
+}
+
+/* Breadcrumbs styles - CRITICAL for many views */
+.breadcrumbs {
+  height: 3em;
+  background: var(--background);
+  border-bottom: 1px solid var(--divider);
+  position: sticky;
+  z-index: 1000;
+  top: 4em;
+  /* Match header height */
+  display: flex;
+  align-items: center;
+  color: var(--textPrimary);
+  padding: 0 1em;
+}
+
+.breadcrumbs span,
+.breadcrumbs a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  transition: 0.1s ease-in;
+  border-radius: 0.125em;
+}
+
+.breadcrumbs a:hover {
+  background-color: var(--divider);
+}
+
+.breadcrumbs span a {
+  padding: 0.2em;
+}
+
+.break-word {
+  word-break: break-all;
+}
+
+/* Number input styles preserved */
+.vue-number-input>input {
+  background: var(--surfacePrimary) !important;
+  border-color: var(--surfaceSecondary) !important;
+  color: var(--textSecondary) !important;
+}
+
+.vfm-modal {
+  z-index: 9999999 !important;
+}
+
+/* Modern Scrollbar - keep this from my previous "improvement" as it's harmless and nice */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--divider);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--textTertiary);
+}

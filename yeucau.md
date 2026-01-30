@@ -1,0 +1,1 @@
+đọc code này và tạo một thư mục "Share Public" dùng chung cho tất cả các user, nó sẽ hiện lên tất cả các user, mỗi user có thể chọn 1 folder bất kỳ, bấm Make Share Public, thì nó sẽ hiện ra chỗ Share Public kia. Khi bấm make Share Public thì cho chọn: View Only, Change (every one/ chọn user để cho phép change)

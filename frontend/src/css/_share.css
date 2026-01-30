@@ -1,0 +1,231 @@
+.share-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background);
+  color: var(--textPrimary);
+}
+
+.share-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Sidebar Info Panel */
+.share-sidebar {
+  width: 320px;
+  background: var(--surfacePrimary);
+  border-right: 1px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.share-sidebar.collapsed {
+  width: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.share-sidebar-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.share-info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.share-info-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--blue), var(--dark-blue));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.share-info-icon i {
+  font-size: 3rem;
+  color: white;
+}
+
+.share-info-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--textSecondary);
+  word-break: break-word;
+}
+
+.share-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.share-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.share-info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--textPrimary);
+  opacity: 0.6;
+}
+
+.share-info-value {
+  font-size: 0.95rem;
+  color: var(--textSecondary);
+  font-weight: 500;
+}
+
+.share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.share-actions .button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.share-actions .button--primary {
+  background: var(--blue);
+  color: white;
+  border: none;
+}
+
+.share-actions .button--primary:hover {
+  background: var(--dark-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+
+.share-qrcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px dashed var(--divider);
+}
+
+.share-qrcode-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Main Content Area */
+.share-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--background);
+  transition: margin-right 0.3s ease;
+}
+
+.share-content-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.share-listing-container {
+  background: var(--surfacePrimary);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--divider);
+  overflow: hidden;
+}
+
+#listing.list .item {
+  border-bottom: 1px solid var(--divider);
+  transition: background 0.2s;
+}
+
+#listing.list .item:last-child {
+  border-bottom: none;
+}
+
+#listing.list .item:hover {
+  background: var(--hover);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .share-sidebar {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 576px) {
+  .share-sidebar {
+    width: 100%;
+  }
+  .share-content-body {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+/* Fixed Error Overlay */
+.share-error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.share__wrong__password {
+  background: var(--red);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
